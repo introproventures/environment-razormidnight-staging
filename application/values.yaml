@@ -28,8 +28,8 @@ rabbitmq:
   replicaCount: 1
   ingress:
     enabled: true
-    hostName: "jx-staging-quickstart-http.jx-staging.35.192.45.39.nip.io"
-    path: /rabbitmq
+    hostName: "rabbitmq.jx-staging.35.192.45.39.nip.io"
+    path: /
     annotations:
       kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/rewrite-target: /
