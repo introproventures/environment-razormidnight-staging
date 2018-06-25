@@ -24,7 +24,7 @@ rabbitmq:
     cpu: 100m
     memory: 1Gi
   rbac:
-    create: false
+    create: true
   replicaCount: 1
   ingress:
     enabled: true
