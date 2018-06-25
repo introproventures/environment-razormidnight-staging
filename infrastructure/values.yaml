@@ -1,0 +1,34 @@
+keycloak:
+  enabled: true
+  keycloak:
+    username: admin
+    password: admin
+    persistence:
+      deployPostgres: false
+      dbVendor: H2
+    ingress:
+      enabled: true
+      path: /
+      hosts:
+        - "jx-staging-quickstart-http.jx-staging.activiti.envalfresco.com"
+      annotations:
+    livenessProbe:
+      initialDelaySeconds: 140
+    extraVolumes: |
+      - name: realm-secret
+        secret:
+          secretName: {{ .Release.Name }}-realm-secret
+    extraVolumeMounts: |
+      - name: realm-secret
+        mountPath: "/realm/"
+        readOnly: true
+    extraArgs: -Dkeycloak.import=activiti-realm.json
+    preStartScript: |
+      /opt/jboss/keycloak/bin/add-user.sh -u admin -p admin
+      /opt/jboss/keycloak/bin/add-user-keycloak.sh -r master -u admin -p admin
+      cp /realm/activiti-realm.json .
+      sed -i 's/activiti-cloud-demo-ui:30082/jx-staging-quickstart-http.jx-staging.activiti.envalfresco.com/g' activiti-realm.json
+      sed -i 's/activiti-cloud-demo-ui:\*/jx-staging-quickstart-http.jx-staging.activiti.envalfresco.com:*/g' activiti-realm.json
+      sed -i 's/placeholder.com/jx-staging-quickstart-http.jx-staging.activiti.envalfresco.com:*/g' activiti-realm.json
+      sed -i 's/dummy.com/gw.jx-staging.activiti.envalfresco.com:*/g' activiti-realm.json
+      sed -i 's/activiti-cloud-sso-idm-kub:30082/gw.jx-staging.activiti.envalfresco.com/g' activiti-realm.json
