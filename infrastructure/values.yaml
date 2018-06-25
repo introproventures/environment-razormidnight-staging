@@ -10,7 +10,7 @@ keycloak:
       enabled: true
       path: /
       hosts:
-        - "jx-staging-quickstart-http.jx-staging.activiti.envalfresco.com"
+        - "jx-staging-quickstart-http.jx-staging.35.192.45.39.nip.io"
       annotations:
     livenessProbe:
       initialDelaySeconds: 140
@@ -27,8 +27,8 @@ keycloak:
       /opt/jboss/keycloak/bin/add-user.sh -u admin -p admin
       /opt/jboss/keycloak/bin/add-user-keycloak.sh -r master -u admin -p admin
       cp /realm/activiti-realm.json .
-      sed -i 's/activiti-cloud-demo-ui:30082/jx-staging-quickstart-http.jx-staging.activiti.envalfresco.com/g' activiti-realm.json
-      sed -i 's/activiti-cloud-demo-ui:\*/jx-staging-quickstart-http.jx-staging.activiti.envalfresco.com:*/g' activiti-realm.json
-      sed -i 's/placeholder.com/jx-staging-quickstart-http.jx-staging.activiti.envalfresco.com:*/g' activiti-realm.json
-      sed -i 's/dummy.com/gw.jx-staging.activiti.envalfresco.com:*/g' activiti-realm.json
-      sed -i 's/activiti-cloud-sso-idm-kub:30082/gw.jx-staging.activiti.envalfresco.com/g' activiti-realm.json
+      sed -i 's/activiti-cloud-demo-ui:30082/jx-staging-quickstart-http.jx-staging.35.192.45.39.nip.io/g' activiti-realm.json
+      sed -i 's/activiti-cloud-demo-ui:\*/jx-staging-quickstart-http.jx-staging.35.192.45.39.nip.io:*/g' activiti-realm.json
+      sed -i 's/placeholder.com/jx-staging-quickstart-http.jx-staging.35.192.45.39.nip.io:*/g' activiti-realm.json
+      sed -i 's/dummy.com/gw.jx-staging.35.192.45.39.nip.io:*/g' activiti-realm.json
+      sed -i 's/activiti-cloud-sso-idm-kub:30082/gw.jx-staging.35.192.45.39.nip.io/g' activiti-realm.json

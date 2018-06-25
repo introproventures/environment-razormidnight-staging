@@ -7,3 +7,9 @@ dependencies:
   version: 2.3.58
   repository: https://chartmuseum.build.cd.jenkins-x.io
   alias: cleanup
+- name: infrastructure
+  repository: file://../infrastructure
+  version: 0.1.0
+- name: application
+  repository: file://../application
+  version: 0.1.0
