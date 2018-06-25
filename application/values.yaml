@@ -28,7 +28,7 @@ rabbitmq:
   ingress:
     enabled: true
     hostName: "rabbitmq.jx-staging.35.192.45.39.nip.io"
-    path: /admin
+    path: /
     annotations:
       kubernetes.io/ingress.class: nginx
       nginx.ingress.kubernetes.io/rewrite-target: /
