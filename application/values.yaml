@@ -11,7 +11,7 @@ querypostgresql:
 
 rabbitmq:
   enabled: true
-  #rabbitmqErlangCookie: 124567890abcdefghijklmnopqrstuv
+  rabbitmqErlangCookie: 124567890abcdefghijklmnopqrstuv
   rabbitmqUsername: "guest"
   rabbitmqPassword: "guest"
   rabbitmqSTOMPPlugin:
@@ -24,7 +24,7 @@ rabbitmq:
     cpu: 100m
     memory: 1Gi
   rbac:
-    create: false
+    create: true
   replicaCount: 1
   ingress:
     enabled: true
