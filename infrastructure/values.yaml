@@ -11,9 +11,9 @@ keycloak:
 #         configMapKeyRef:
 #           name: {{ .Release.Name }}-keycloak-http
 #           key: expose-full-keycloak-service-key
-#    service:
-#      annotations:
-#        fabric8.io/expose: "true"
+    service:
+      annotations:
+        fabric8.io/expose: "true"
 #      labels:
 #        expose: "true"
     persistence:
