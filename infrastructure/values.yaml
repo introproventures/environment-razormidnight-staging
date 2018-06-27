@@ -14,6 +14,8 @@ keycloak:
     service:
       annotations:
         fabric8.io/expose: "true"
+      labels:
+        expose: true
     persistence:
       deployPostgres: false
       dbVendor: H2
