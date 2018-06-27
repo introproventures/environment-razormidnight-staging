@@ -16,10 +16,10 @@ metadata:
     expose.config.fabric8.io/url-protocol: url-protocol
     expose.config.fabric8.io/console-url-key: console-url-key
     expose.config.fabric8.io/oauth-authorize-url-key: oauth-authorize-url-key
-    expose.service-key.config.fabric8.io/jx-staging-keycloak-http: expose-keycloak-service-key
-    expose-full.service-key.config.fabric8.io/jx-staging-keycloak-http: expose-full-keycloak-service-key
-    expose-no-path.service-key.config.fabric8.io/jx-staging-keycloak-http: expose-no-path-keycloak-service-key
-    expose-no-protocol.service-key.config.fabric8.io/jx-staging-keycloak-http: expose-no-protocol-keycloak-service-key
-    expose-full-no-protocol.service-key.config.fabric8.io/jx-staging-keycloak-http: expose-full-no-protocol-keycloak-service-key
+    expose.service-key.config.fabric8.io/{{ .Release.Name }}-keycloak-http: expose-keycloak-service-key
+    expose-full.service-key.config.fabric8.io/{{ .Release.Name }}-keycloak-http: expose-full-keycloak-service-key
+    expose-no-path.service-key.config.fabric8.io/{{ .Release.Name }}-keycloak-http: expose-no-path-keycloak-service-key
+    expose-no-protocol.service-key.config.fabric8.io/{{ .Release.Name }}-keycloak-http: expose-no-protocol-keycloak-service-key
+    expose-full-no-protocol.service-key.config.fabric8.io/{{ .Release.Name }}-keycloak-http: expose-full-no-protocol-keycloak-service-key
   labels: {}
-  name: "jx-staging-keycloak-http"
+  name: {{ .Release.Name }}-keycloak-http
