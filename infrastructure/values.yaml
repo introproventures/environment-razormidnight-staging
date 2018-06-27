@@ -13,7 +13,7 @@ keycloak:
            key: exposeUrl
     service:
       annotations:
-        fabric8.io/expose: "true"
+        fabric8.io/expose: "false"
     persistence:
       deployPostgres: false
       dbVendor: H2
