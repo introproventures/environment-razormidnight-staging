@@ -25,7 +25,6 @@ keycloak:
             add_header Access-Control-Allow-Methods "POST, GET, OPTIONS, PUT, PATCH, DELETE";
             add_header Access-Control-Allow-Credentials true;
             add_header Access-Control-Allow-Headers "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization";
-        fabric8.io/ingress.name: keycloak-http
         fabric8.io/ingress.path: /
         persistence:
       deployPostgres: false
