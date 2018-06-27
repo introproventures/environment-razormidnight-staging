@@ -10,7 +10,7 @@ keycloak:
        valueFrom:
          configMapKeyRef:
            name: {{ .Release.Name }}-keycloak-http
-           key: "expose-full-keycloak-service-key"
+           key: EXPOSE_URL
      - name: FOO
        valueFrom:
          configMapKeyRef:
