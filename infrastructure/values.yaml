@@ -4,16 +4,16 @@ keycloak:
     username: admin
     password: admin
     extraEnv: |
-#     - name: EXPOSE_URL
-#       value: "http://keycloak-http.jx-staging.35.192.45.39.nip.io"
      - name: EXPOSE_URL
+       value: "http://keycloak-http.jx-staging.35.192.45.39.nip.io"
+     - name: FOO
        valueFrom:
          configMapKeyRef:
            name: {{ .Release.Name }}-keycloak-http
-           key: expose-full-keycloak-service-key
-#    service:
-#      annotations:
-#        fabric8.io/expose: "true"
+           key: foo
+    service:
+      annotations:
+        fabric8.io/expose: "true"
 #      labels:
 #        expose: "true"
     persistence:
