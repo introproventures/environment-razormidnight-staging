@@ -4,7 +4,7 @@ keycloak:
     username: admin
     password: admin
     extraEnv:
-      EXPOSE_URL: "http://keycloak-http.jx-staging.35.192.45.39.nip.io"
+      EXPOSE_URL: http://keycloak-http.jx-staging.35.192.45.39.nip.io
 #     - name: EXPOSE_URL
 #       valueFrom:
 #         configMapKeyRef:
