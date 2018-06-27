@@ -6,7 +6,7 @@ data:
 kind: "ConfigMap"
 metadata:
   annotations:
-expose.config.fabric8.io/url-key: url-key
+    expose.config.fabric8.io/url-key: url-key
     expose.config.fabric8.io/host-key: host-key
     expose.config.fabric8.io/clusterip-key: clusterip-key
     expose.config.fabric8.io/clusterip-port-key: clusterip-port-key
