@@ -3,6 +3,12 @@ keycloak:
   keycloak:
     username: admin
     password: admin
+    extraEnv:
+     - name: EXPOSE_URL
+       valueFrom:
+         configMapKeyRef:
+           name: {{ .Release.Name }}-keycloak-http
+           key: expose-full-keycloak-service-key
     service:
       annotations:
         fabric8.io/expose: "true"
