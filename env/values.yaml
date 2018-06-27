@@ -25,3 +25,8 @@ expose:
 global:
   keycloak:
     url: "http://jx-staging-quickstart-http.jx-staging.35.192.45.39.nip.io/auth"
+
+activiti-cloud-query:
+  service:
+    annotations:
+      fabric8.io/expose: "true"  
