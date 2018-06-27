@@ -10,7 +10,7 @@ keycloak:
        valueFrom:
          configMapKeyRef:
            name: {{ .Release.Name }}-keycloak-http
-           key: foo
+           key: exposeUrl
     service:
       annotations:
         fabric8.io/expose: "true"
