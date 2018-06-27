@@ -21,3 +21,7 @@ expose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
+
+global:
+  keycloak:
+    url: "http://jx-staging-quickstart-http.jx-staging.35.192.45.39.nip.io/auth"

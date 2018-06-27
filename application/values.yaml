@@ -11,9 +11,9 @@ querypostgresql:
 
 rabbitmq:
   enabled: true
-  rabbitmqErlangCookie: 124567890abcdefghijklmnopqrstuv
   rabbitmqUsername: "guest"
   rabbitmqPassword: "guest"
+  rabbitmqErlangCookie: 124567890abcdefghijklmnopqrstuv
   rabbitmqSTOMPPlugin:
     enabled: true
   resources:
