@@ -22,3 +22,6 @@ dependencies:
 - name: activiti-cloud-audit
   repository: http://jenkins-x-chartmuseum:8080
   version: 7.0.11
+- name: example-runtime-bundle
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 7.0.34
