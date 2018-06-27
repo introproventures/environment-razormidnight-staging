@@ -3,9 +3,9 @@ keycloak:
   keycloak:
     username: admin
     password: admin
-#    extraEnv: |
-#     - name: EXPOSE_URL
-#       value: "http://keycloak-http.jx-staging.35.192.45.39.nip.io"
+    extraEnv: |
+     - name: EXPOSE_URL
+       value: "http://keycloak-http.jx-staging.35.192.45.39.nip.io"
 #     - name: EXPOSE_URL
 #       valueFrom:
 #         configMapKeyRef:
@@ -14,6 +14,7 @@ keycloak:
     service:
       annotations:
         fabric8.io/expose: "true"
+        fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
 #      labels:
 #        expose: "true"
     persistence:
