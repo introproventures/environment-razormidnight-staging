@@ -3,6 +3,9 @@ keycloak:
   keycloak:
     username: admin
     password: admin
+    service:
+      annotations:
+        fabric8.io/expose: "true"
     persistence:
       deployPostgres: false
       dbVendor: H2
