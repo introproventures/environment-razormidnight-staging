@@ -29,7 +29,7 @@ keycloak:
       deployPostgres: false
       dbVendor: H2
     ingress:
-      enabled: true
+      enabled: false
       path: /
       hosts:
         - "jx-staging-quickstart-http.jx-staging.35.192.45.39.nip.io"
