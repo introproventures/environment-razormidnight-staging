@@ -17,6 +17,16 @@ keycloak:
     service:
       annotations:
         fabric8.io/expose: "true"
+        fabric8.io/ingress.name: {{ .Release.Name }}-keycloak-http
+        fabric8.io/ingress.path: /
+        fabric8.io/ingress.annotations: |-
+          kubernetes.io/ingress.class: nginx
+          nginx.ingress.kubernetes.io/rewrite-target: /
+          nginx.ingress.kubernetes.io/ingress.class: nginx
+          nginx.ingress.kubernetes.io/configuration-snippet: |
+                add_header Access-Control-Allow-Methods "POST, GET, OPTIONS, PUT, PATCH, DELETE";
+                add_header Access-Control-Allow-Credentials true;
+                add_header Access-Control-Allow-Headers "DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization";
     persistence:
       deployPostgres: false
       dbVendor: H2
