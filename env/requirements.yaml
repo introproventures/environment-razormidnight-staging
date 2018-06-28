@@ -7,9 +7,9 @@ dependencies:
   name: exposecontroller
   repository: https://chartmuseum.build.cd.jenkins-x.io
   version: 2.3.59
-- name: infrastructure
-  repository: file://../infrastructure
-  version: 0.1.0
+#- name: infrastructure
+#  repository: file://../infrastructure
+#  version: 0.1.0
 - name: application
   repository: file://../application
   version: 0.1.0
