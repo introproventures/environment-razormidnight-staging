@@ -24,7 +24,7 @@ expose:
 
 global:
   keycloak:
-    url: "http://activiti.jx-staging.35.192.45.39.nip.io/auth"
+    url: "http://activiti1.jx-staging.35.192.45.39.nip.io/auth"
 
 activiti-cloud-query:
   service:
@@ -49,11 +49,9 @@ activiti-cloud-gateway:
       fabric8.io/expose: "true"
       kubernetes.io/ingress.class: nginx
       fabric8.io/ingress.name: activiti
-      abric8.io/ingress.path: /api
       fabric8.io/ingress.annotations: |-
         kubernetes.io/ingress.class: nginx
         nginx.ingress.kubernetes.io/enable-cors: true
         nginx.ingress.kubernetes.io/cors-allow-headers: "*"
         nginx.ingress.kubernetes.io/x-forwarded-prefix: true
-
-#          nginx.ingress.kubernetes.io/rewrite-target: /
+        nginx.ingress.kubernetes.io/rewrite-target: /
