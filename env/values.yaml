@@ -33,7 +33,7 @@ activiti-cloud-query:
       
 activiti-cloud-demo-ui:
   gatewayUrl:  "http://activiti.jx-staging.35.192.45.39.nip.io"
-  idmUrl: "http://activiti.jx-staging.35.192.45.39.nip.io/auth/realms/activiti/protocol/openid-connect/token"
+  idmUrl: "http://activiti1.jx-staging.35.192.45.39.nip.io/auth/realms/activiti/protocol/openid-connect/token"
   idmClientId:  "activiti"
   service:
       annotations:
