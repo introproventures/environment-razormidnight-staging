@@ -22,3 +22,6 @@ dependencies:
 - name: activiti-cloud-gateway
   repository: http://jenkins-x-chartmuseum:8080
   version: 1.0.51
+- name: example-runtime-bundle
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 7.0.40
