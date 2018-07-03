@@ -3,10 +3,12 @@ keycloak:
   keycloak:
     username: admin
     password: admin
-    env:
-     - name: PROXY_ADDRESS_FORWARDING
-       value: "true"
+#    env:
+#     - name: PROXY_ADDRESS_FORWARDING
+#       value: "true"
     extraEnv: |
+    - name: PROXY_ADDRESS_FORWARDING
+      value: "true"
      - name: EXPOSE_URL
        valueFrom:
          configMapKeyRef:
