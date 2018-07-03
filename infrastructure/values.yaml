@@ -5,7 +5,7 @@ keycloak:
     password: admin
     env:
      - name: PROXY_ADDRESS_FORWARDING
-      value: "true"
+       value: "true"
     extraEnv: |
      - name: EXPOSE_URL
        valueFrom:
