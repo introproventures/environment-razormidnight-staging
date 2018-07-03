@@ -38,7 +38,7 @@ activiti-cloud-demo-ui:
 
   service:
       annotations:
-        configmap.fabric8.io/update-on-change: {{ .Release.Name }}-keycloak-http
+        configmap.fabric8.io/update-on-change: "{{ .Release.Name }}-keycloak-http"
         fabric8.io/expose: "true"
         fabric8.io/ingress.name: activiti2
         fabric8.io/ingress.annotations: |-
