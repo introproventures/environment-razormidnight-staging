@@ -7,8 +7,8 @@ keycloak:
 #     - name: PROXY_ADDRESS_FORWARDING
 #       value: "true"
     extraEnv: |
-    - name: PROXY_ADDRESS_FORWARDING
-      value: "true"
+     - name: PROXY_ADDRESS_FORWARDING
+       value: "true"
      - name: EXPOSE_URL
        valueFrom:
          configMapKeyRef:
