@@ -15,16 +15,16 @@ dependencies:
   version: 0.1.0
 - name: activiti-cloud-query
   repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.28
+  version: 7.0.31
 - name: activiti-cloud-demo-ui
   repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.37
+  version: 7.0.42
 - name: activiti-cloud-gateway
   repository: http://jenkins-x-chartmuseum:8080
-  version: 1.0.51
+  version: 1.0.55
 - name: example-runtime-bundle
   repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.43
+  version: 7.0.51
 - name: iron-mountain-activiti-7-poc
   repository: http://jenkins-x-chartmuseum:8080
   version: 7.0.13
