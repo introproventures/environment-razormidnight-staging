@@ -28,6 +28,8 @@ global:
 
 
 grafana:
+  adminUser: admin
+  adminPassword: admin
   service:
     annotations:
       fabric8.io/expose: "true"
