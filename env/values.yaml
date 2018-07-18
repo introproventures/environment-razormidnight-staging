@@ -26,6 +26,15 @@ global:
   keycloak:
     url: "http://activiti.jx-staging.35.192.45.39.nip.io/auth"
 
+
+grafana:
+  service:
+    annotations:
+      fabric8.io/expose: "true"
+      fabric8.io/ingress.name: activiti
+      fabric8.io/ingress.path: /grafana/
+
+
 activiti-cloud-query:
   service:
     annotations:

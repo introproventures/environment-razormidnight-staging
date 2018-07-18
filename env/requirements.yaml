@@ -31,3 +31,6 @@ dependencies:
 - name: activiti-cloud-audit
   repository: http://jenkins-x-chartmuseum:8080
   version: 7.0.13
+- name: grafana
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 1.12.0
