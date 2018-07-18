@@ -31,8 +31,8 @@ grafana:
   service:
     annotations:
       fabric8.io/expose: "true"
-      fabric8.io/ingress.name: activiti
-      fabric8.io/ingress.path: /grafana/
+      fabric8.io/ingress.name: grafana
+      fabric8.io/ingress.path: /
 
 
 activiti-cloud-query:
