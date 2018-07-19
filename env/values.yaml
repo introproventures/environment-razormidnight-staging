@@ -27,14 +27,14 @@ global:
     url: "http://activiti.jx-staging.35.192.45.39.nip.io/auth"
 
 
-grafana:
-  adminUser: admin
-  adminPassword: strongpassword
-  service:
-    annotations:
-      fabric8.io/expose: "true"
-      fabric8.io/ingress.name: grafana
-      fabric8.io/ingress.path: /
+#grafana:
+#  adminUser: admin
+#  adminPassword: strongpassword
+#  service:
+#    annotations:
+#      fabric8.io/expose: "true"
+#      fabric8.io/ingress.name: grafana
+#      fabric8.io/ingress.path: /
 
 
 activiti-cloud-query:
