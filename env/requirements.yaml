@@ -27,10 +27,7 @@ dependencies:
   version: 7.0.51
 - name: iron-mountain-activiti-7-poc
   repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.22
+  version: 7.0.23
 - name: activiti-cloud-audit
   repository: http://jenkins-x-chartmuseum:8080
   version: 7.0.16
-  #- name: grafana
-  #repository: https://kubernetes-charts.storage.googleapis.com
-  #version: 1.12.0
