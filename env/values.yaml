@@ -29,7 +29,7 @@ global:
 
 grafana:
   adminUser: admin
-  #adminPassword: admin123
+  adminPassword: strongpassword
   service:
     annotations:
       fabric8.io/expose: "true"
