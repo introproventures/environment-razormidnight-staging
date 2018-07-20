@@ -27,7 +27,7 @@ dependencies:
   version: 7.0.52
 - name: iron-mountain-activiti-7-poc
   repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.23
+  version: 7.0.24
 - name: activiti-cloud-audit
   repository: http://jenkins-x-chartmuseum:8080
   version: 7.0.16
