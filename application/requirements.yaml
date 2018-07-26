@@ -1,6 +1,0 @@
-dependencies:
-- alias: rabbitmq
-  condition: rabbitmq.enabled
-  name: rabbitmq-ha
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 1.6.2
