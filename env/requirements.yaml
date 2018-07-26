@@ -1,33 +1,30 @@
 dependencies:
-- alias: expose
-  name: exposecontroller
-  repository: https://chartmuseum.build.cd.jenkins-x.io
-  version: 2.3.59
-- alias: cleanup
-  name: exposecontroller
-  repository: https://chartmuseum.build.cd.jenkins-x.io
-  version: 2.3.59
-- name: infrastructure
-  repository: file://../infrastructure
-  version: 0.1.0
-- name: application
-  repository: file://../application
-  version: 0.1.0
-- name: activiti-cloud-query
+- name: activiti-cloud-audit
   repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.33
+  version: 7.0.16
 - name: activiti-cloud-demo-ui
   repository: http://jenkins-x-chartmuseum:8080
   version: 7.0.42
 - name: activiti-cloud-gateway
   repository: http://jenkins-x-chartmuseum:8080
   version: 1.0.55
-- name: example-runtime-bundle
+- name: activiti-cloud-query
   repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.52
+  version: 7.0.33
+- name: application
+  repository: file://../application
+  version: 0.1.0
+- alias: cleanup
+  name: exposecontroller
+  repository: https://chartmuseum.build.cd.jenkins-x.io
+  version: 2.3.59
+- alias: expose
+  name: exposecontroller
+  repository: https://chartmuseum.build.cd.jenkins-x.io
+  version: 2.3.59
+- name: infrastructure
+  repository: file://../infrastructure
+  version: 0.1.0
 - name: iron-mountain-activiti-7-poc
   repository: http://jenkins-x-chartmuseum:8080
   version: 7.0.27
-- name: activiti-cloud-audit
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.16
