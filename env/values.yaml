@@ -27,8 +27,6 @@ global:
     url: "http://activiti-keycloak.jx-staging.35.192.45.39.nip.io/auth"
 
 example-runtime-bundle:
-  db:
-    deployPostgres: true
   image:
     pullPolicy: Always
   extraEnv: |
@@ -37,6 +35,9 @@ example-runtime-bundle:
     - name: ACTIVITI_CLOUD_SECURITY_GROUP_TESTGROUP_RBMYAPP_POLICY_WRITE
       value: "*"
 application:
+  runtime-bundle:
+    db:
+      deployPostgres: true
   activiti-cloud-query:
     image:
       pullPolicy: Always
