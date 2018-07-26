@@ -1,7 +1,7 @@
 dependencies:
 - name: example-runtime-bundle
   repository: http://jenkins-x-chartmuseum:8080
-  version: 7.0.1
+  version: 7.0.2
 - alias: cleanup
   name: exposecontroller
   repository: https://chartmuseum.build.cd.jenkins-x.io
@@ -15,4 +15,4 @@ dependencies:
   version: 0.1.6
 - name: application
   repository: https://activiti.github.io/activiti-cloud-charts/
-  version: 0.1.16  
+  version: 0.1.16
