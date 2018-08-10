@@ -26,28 +26,62 @@ global:
   keycloak:
     url: "http://activiti-keycloak.jx-staging.35.192.45.39.nip.io/auth"
 
-example-runtime-bundle:
-  image:
-    pullPolicy: Always
-  extraEnv: |
-    - name: ACTIVITI_CLOUD_SECURITY_GROUP_HR_RBMYAPP_POLICY_WRITE
-      value: "SimpleProcess"
-    - name: ACTIVITI_CLOUD_SECURITY_GROUP_TESTGROUP_RBMYAPP_POLICY_WRITE
-      value: "*"
 application:
   runtime-bundle:
+    enabled: true
     db:
       deployPostgres: true
-  activiti-cloud-query:
     image:
       pullPolicy: Always
+    # extraEnv: |
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_NAME
+    #     value: "HR Group restricted to SimpleProcess and ConnectorProcess"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_GROUPS
+    #     value: "hr"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_ACCESS
+    #     value: "WRITE"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_SERVICENAME
+    #     value: "rb-my-app"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_KEYS
+    #     value: "SimpleProcess,ConnectorProcess,fixSystemFailure"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_NAME
+    #     value: "testgroup not restricted at all"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_GROUPS
+    #     value: "testgroup"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_ACCESS
+    #     value: "WRITE"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_SERVICENAME
+    #     value: "rb-my-app"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_KEYS
+    #     value: "*"
+
+  activiti-cloud-query:
     db:
       deployPostgres: true
-    extraEnv: |
-      - name: ACTIVITI_CLOUD_SECURITY_GROUP_HR_RBMYAPP_POLICY_WRITE
-        value: "SimpleProcess"
-      - name: ACTIVITI_CLOUD_SECURITY_GROUP_TESTGROUP_RBMYAPP_POLICY_WRITE
-        value: "*"
+    image:
+      pullPolicy: Always
+    # extraEnv: |
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_NAME
+    #     value: "HR Group restricted to SimpleProcess and ConnectorProcess"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_GROUPS
+    #     value: "hr"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_ACCESS
+    #     value: "WRITE"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_SERVICENAME
+    #     value: "rb-my-app"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_KEYS
+    #     value: "SimpleProcess,ConnectorProcess,fixSystemFailure"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_NAME
+    #     value: "testgroup not restricted at all"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_GROUPS
+    #     value: "testgroup"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_ACCESS
+    #     value: "WRITE"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_SERVICENAME
+    #     value: "rb-my-app"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_KEYS
+    #     value: "*"
+
   activiti-cloud-connector:
     enabled: true
     image:
@@ -56,24 +90,41 @@ application:
   activiti-cloud-demo-ui:
     enabled: true
     ingress:
-      enabled: true
-      hostName: "activiti-cloud-demo-ui.jx-staging.35.192.45.39.nip.io"
-      annotations:
-        kubernetes.io/ingress.class: nginx
+     enabled: true
+     hostName: "activiti-cloud-demo-ui.jx-staging.35.192.45.39.nip.io"
+     annotations:
+       kubernetes.io/ingress.class: nginx
     gatewayUrl:  "http://activiti-cloud-gateway.jx-staging.35.192.45.39.nip.io"
     idmUrl: "http://activiti-keycloak.jx-staging.35.192.45.39.nip.io/auth/realms/activiti/protocol/openid-connect/token"
     idmClientId:  "activiti"
 
   activiti-cloud-audit:
-    image:
-      pullPolicy: Always
     db:
       deployPostgres: true
-    extraEnv: |
-      - name: ACTIVITI_CLOUD_SECURITY_GROUP_HR_RBMYAPP_POLICY_WRITE
-        value: "SimpleProcess"
-      - name: ACTIVITI_CLOUD_SECURITY_GROUP_TESTGROUP_RBMYAPP_POLICY_WRITE
-        value: "*"
+    image:
+      pullPolicy: Always
+    # extraEnv: |
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_NAME
+    #     value: "HR Group restricted to SimpleProcess and ConnectorProcess"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_GROUPS
+    #     value: "hr"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_ACCESS
+    #     value: "WRITE"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_SERVICENAME
+    #     value: "rb-my-app"
+    #   - name: ACTIVITI_SECURITY_POLICIES_0_KEYS
+    #     value: "SimpleProcess,ConnectorProcess,fixSystemFailure"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_NAME
+    #     value: "testgroup not restricted at all"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_GROUPS
+    #     value: "testgroup"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_ACCESS
+    #     value: "WRITE"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_SERVICENAME
+    #     value: "rb-my-app"
+    #   - name: ACTIVITI_SECURITY_POLICIES_1_KEYS
+    #     value: "*"
+
 infrastructure:
   activiti-keycloak:
     keycloak:
