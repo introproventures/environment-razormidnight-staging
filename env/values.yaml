@@ -28,7 +28,7 @@ global:
 
 application:
   runtime-bundle:
-    enabled: true
+    enabled: false
     db:
       deployPostgres: true
     image:
